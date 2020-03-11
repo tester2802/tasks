@@ -1,23 +1,26 @@
 """
-5. Напишите функцию которая находит самою длинную слово в строке.
+11. Напишите функцию которая подсчитает количество строк, слов и букв в текстовом файле.
 """
 
-strng = input("Enter string: ")
-print(strng)
-
-# преобразование строки в список слов,разделение происходит по пробелу
-listWords = strng.split()
-
-# предполагается, что самое длинное слово находится первым в списке, т. е. имеет индекс 0
-idLongestWord = 0
-
-# остальные слова перебираются в цикле
-for i in range (1,len(listWords)):
-	
-    # Если длина слова под индексом idLongestWord больше, чем длина слова под текущим индексом,
-    if len(listWords[idLongestWord]) < len(listWords[i]):
-        # то следует записать индекс текущего слова в переменную idLongestWord
-        idLongestWord = i
-
-# извлечение из списка listWords слова с индексом idLongestWord и его вывод на экран
-print(listWords[idLongestWord], len(ifLongestWord[i]))
+import sys
+ 
+fname = sys.argv[1]
+lines = 0
+words = 0
+letters = 0
+ 
+for line in open(fname):
+    lines += 1
+    letters += len(line)
+ 
+    pos = 'out'
+    for letter in line:
+        if letter != ' ' and pos == 'out':
+            words += 1
+            pos = 'in'
+        elif letter == ' ':
+            pos = 'out'
+ 
+print("Lines:", lines)
+print("Words:", words)
+print("Letters:", letters)
