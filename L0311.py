@@ -96,7 +96,39 @@ print(math.pi)
 
 === Function enumerate()
 Возвращает генератор, отдающий пары счётчик-элемент для элементов указанной последовательности.
-'''
+
 seasons = ['Spring','Summer','Fall','Winter']
 new = list(enumerate(seasons))
 print(new)
+
+=== Function map()
+Применяет указанную функцию к каждому элементу указанной последовательности/последовательностей.
+
+
+# def uppercase():
+	# return char.upper()
+
+numbers = ["1","2","3","4","5"]
+# list1 = ["q","d","a","b","z"]
+
+new_number1 = list(map(int, numbers))
+new_number2 = list(map(float, numbers))
+new_number3 = list(map(set, numbers))
+new_number4 = list(map(tuple, numbers))
+# new_list1 = list(map(uppercase,list1))
+
+print(numbers)
+print(new_number1)
+print(new_number2)
+print(new_number3)
+print(new_number4)
+# print(new_number5)
+
+
+def generate_link(link):
+	base_url = "https://www.example.com"
+	return base_url + link
+
+print(list(map(generate_link,["/hello/world/kg","/world/hello/kg"])))
+print("\n")
+'''
