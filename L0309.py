@@ -64,3 +64,10 @@ new_list = {x for x in list_}
 print(new_sets)
 print(new_list)# from the list_ extracted only tht unique values
 print(type(new_sets)) # множество то же самое что и словари с единственны отличием: у множества есть уникальный ключ...??
+
+dfksdja;fklsdja;fklsdja
+
+
+git add filem.add
+git commet
+push
